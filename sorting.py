@@ -1,11 +1,19 @@
 def swap(alist, index):
-    a = alist[index]
-    b = alist[index+1]
-    alist[index] = b
-    alist[index+1] = a
-    return (alist)
+    '''
+    this function swaps two items in a list
+    
+    this function takes a list an index as inputs, and outputs a list with two items swaped 
+    '''
+    a = alist[index] # set the a variable to the defined index number from a alist
+    b = alist[index+1] # set the b variable to the defined index number increased by 1 from alist
+    alist[index] = b # sets the defined index number to the variable b
+    alist[index+1] = a # sets the defined index number increased by 1 to the variable a
+    return (alist) # gives alist back to caller 
 
 def bsort(alist):
+    '''
+    this fuction sort a list from smallest to largest  
+    '''
     swaps = True
     while swaps:
         swaps = False
