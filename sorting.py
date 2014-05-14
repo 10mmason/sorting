@@ -13,22 +13,25 @@ def swap(alist, index):
 def bsort(alist):
     '''
     this fuction sort a list from smallest to largest  
+    
+    it does this by going through each two ajecent pairs in the list and moving them in order of value
+    (the smaller one moves to the less) 
     '''
-    swaps = True
-    while swaps:
-        swaps = False
-        for i in range(len(alist)-1):
+    swaps = True # sets the swaps variable to True
+    while swaps: # will keep looping the code within the indent until it is no longer true 
+        swaps = False # set the swaps variable to false 
+        for i in range(len(alist)-1): # 
             if (alist[i] > alist[i+1]):
                 alist = swap(alist, i)
-                swaps = True
-    return (alist)
+                swaps = True # sets the swaps variable to True
+    return (alist) # Gives alist back to caller 
 
 def mini(alist):
     answer = alist[0]
     for item in alist:
         if item< answer:
             answer = item
-    return (answer)
+    return (answer) # gives answer back to caller 
 
 def ssort(alist):
     blist = []
@@ -36,7 +39,7 @@ def ssort(alist):
         N = mini(alist)
         alist.remove (N)
         blist.append(N)
-    return (blist)
+    return (blist) # gives blist back to caller 
 
     
 def mergeSort(alist)
@@ -46,7 +49,7 @@ def mergeSort(alist)
     '''
     
     if len(alist) >= 1:
-        return (alist)
+        return (alist) # gives alist back to caller 
  
     mIndex = len(alist) \ 2
     left = mergeSort(alist[:mIndex])
